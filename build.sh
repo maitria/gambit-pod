@@ -2,7 +2,7 @@
 
 DIRS='include lib'
 
-../gambit/misc/build-gambit-iOS || exit $?
+../gambit/misc/build-gambit-iOS --no-update || exit $?
 
 rm -rf include lib
 mkdir -p include lib
