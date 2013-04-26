@@ -5,8 +5,8 @@ $gambit_build_script --no-update || exit $?
 
 rm -rf include lib
 mkdir -p include lib
-(cd gambit-iOS/current; find lib -name 'lib*.a' |cpio -p ../..)
-(cd gambit-iOS/current; find include -name '*.h' |cpio -p ../..)
+(cd gambit-iOS/current; find lib |cpio -p ../..)
+(cd gambit-iOS/current; find include |cpio -p ../..)
 
 gambit_source_dir=`sed -n 's/^gambit_dist_if_downloaded="\(.*\)"/\1/p' $gambit_build_script`
 compiler_dir="`pwd`/compiler"
